@@ -1,14 +1,15 @@
-$(docutment).ready(function () {
+$(document).ready(function () {
 
     $(".saveBtn").on("click", function () {
 
-        var text = $(this).siblings(".textBox").val();
+        var text = $(this).siblings(".description").val();
         var time = $(this).parent().attr("id");
+
 
         localStorage.setItem(time, text);
     })
 
-    function checkTime () {
+    function timeTracker() {
         var timeNow = moment().hour();
 
         $(".time-block").each(function () {
@@ -46,5 +47,5 @@ $(docutment).ready(function () {
     $("#hour11 .description").val(localStorage.getItem("hour11"));
     $("#hour12 .description").val(localStorage.getItem("hour12"));
 
-    checkTime();
+    timeTracker();
 })
