@@ -39,4 +39,11 @@ p {
 textarea {
     height: 70px;
     width: 700px;
+    margin: 0 10px 0 10px;
+    resize: none;
+}
+
+.saveBtn {
+    height: 70px;
+    width: 50px;
 }
